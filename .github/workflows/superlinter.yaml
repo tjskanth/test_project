@@ -16,5 +16,6 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "building image" && docker build -t abc:a .
-      - run: echo "pushing image" 
+      - run: echo "dockerhub authenticating" && docker login -u tjskanth -p ${{ secrets.DOCKERHUB_SEC }}
+      - run: echo "pushing image"
       - run: echo "🍏 This job's status is ${{ job.status }}."
