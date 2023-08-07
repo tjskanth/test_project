@@ -7,7 +7,7 @@ pipeline {
             steps {
                 sh '''
                 echo "Script executed by $runner_name"
-                echo "Script build number is $env.BUILD_NUMBER"
+                echo "Script build number is $BUILD_NUMBER"
                 '''
 
             }
