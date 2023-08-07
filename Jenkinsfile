@@ -1,7 +1,7 @@
 properties([parameters([string(defaultValue: 'srikanth', name: 'runner_name')])])
 pipeline {
     agent any
-    environemnt {
+    environment {
         Foo = "bar"
     }
 
