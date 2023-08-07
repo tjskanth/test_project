@@ -13,6 +13,7 @@ pipeline {
                 echo "Script build number is $BUILD_NUMBER"
                 '''
                 echo "We have a env var \$Foo and it\'s value is ${env.Foo}"
+                docker build -t myimage:${env.$BUILD_NUMBER}
             }
         }
     }
