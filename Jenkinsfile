@@ -1,6 +1,8 @@
 properties([parameters([string(defaultValue: 'srikanth', name: 'runner_name')])])
 pipeline {
-    agent docker
+    agent {
+        label 'docker'
+    }
     environment {
         Foo = "bar"
     }
