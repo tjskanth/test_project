@@ -18,5 +18,8 @@ pipeline {
                 echo "We have a env var \$Foo and it\'s value is ${env.Foo}"
             }
         }
+        stage('clean ws') {
+            cleanWs()
+        }
     }
 }
